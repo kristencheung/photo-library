@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { redirect } from "next/navigation"
 import { headers } from "next/headers"
 import { Button } from "@/components/ui/button"
