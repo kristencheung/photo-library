@@ -2,28 +2,157 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --surface-default: theme(colors.white.0);
+    --surface-subtle: theme(colors.grey.100);
+    --surface-muted: theme(colors.grey.200);
+    --surface-subdued: theme(colors.grey.300);
+    --surface-emphasis: theme(colors.grey.950);
+    --surface-accent: theme(colors.accent.500);
+    --surface-success: theme(colors.green.500);
+    --surface-success-emphasis: theme(colors.green.200);
+    --surface-critical: theme(colors.red.500);
+    --surface-critical-emphasis: theme(colors.red.200);
+    --surface-blur-90: hsla(0, 0%, 100%, 0.9);
+    --surface-blur-95: hsla(0, 0%, 100%, 0.95);
+    --text-default: theme(colors.grey.950);
+    --text-subtle: theme(colors.grey.500);
+    --text-muted: theme(colors.grey.400);
+    --text-contrast: theme(colors.white.0);
+    --text-emphasis: theme(colors.blue.500);
+    --text-success: theme(colors.green.500);
+    --text-critical: theme(colors.red.500);
+    --icon-default: theme(colors.grey.950);
+    --icon-subtle: theme(colors.grey.500);
+    --icon-muted: theme(colors.grey.300);
+    --icon-contrast: theme(colors.white.0);
+    --icon-accent: theme(colors.accent.500);
+    --icon-success: theme(colors.green.500);
+    --icon-critical: theme(colors.red.500);
+    --border-default: theme(colors.grey.300);
+    --border-subtle: theme(colors.grey.200);
+    --border-muted: theme(colors.grey.100);
+    --border-success: theme(colors.green.500);
+    --border-critical: theme(colors.red.500);
+    --button-primary: theme(colors.grey.950);
+    --button-primary-hover: theme(colors.grey.700);
+    --button-primary-pressed: theme(colors.grey.900);
+    --button-secondary: theme(colors.grey.300);
+    --button-secondary-hover: theme(colors.grey.400);
+    --button-secondary-pressed: theme(colors.grey.500);
+    --button-tertiary: theme(colors.grey.100);
+    --button-tertiary-hover: theme(colors.grey.300);
+    --button-tertiary-pressed: theme(colors.grey.200);
+    --button-tertiary-disabled: theme(colors.grey.300);
+    --button-contrast: theme(colors.white.0);
+    --button-contrast-hover: theme(colors.grey.100);
+    --button-contrast-pressed: theme(colors.grey.200);
+    --button-blur: hsla(0, 0%, 100%, 0.3);
+    --button-border-secondary: theme(colors.grey.300);
+    --button-border-secondary-hover: theme(colors.grey.400);
+    --button-border-secondary-pressed: theme(colors.grey.500);
+    --button-border-secondary-disabled: theme(colors.grey.300);
+  }
+
+  [data-theme="dark"] {
+    --surface-default: theme(colors.grey.950);
+    --surface-subtle: theme(colors.grey.900);
+    --surface-muted: theme(colors.grey.800);
+    --surface-subdued: theme(colors.grey.700);
+    --surface-emphasis: theme(colors.white.0);
+    --surface-accent: theme(colors.accent.500);
+    --surface-success: theme(colors.green.500);
+    --surface-success-emphasis: theme(colors.green.200);
+    --surface-critical: theme(colors.red.500);
+    --surface-critical-emphasis: theme(colors.red.200);
+    --surface-blur-90: hsla(0, 0%, 5%, 0.9);
+    --surface-blur-95: hsla(0, 0%, 5%, 0.95);
+    --text-default: theme(colors.white.0);
+    --text-subtle: theme(colors.grey.500);
+    --text-muted: theme(colors.grey.400);
+    --text-contrast: theme(colors.grey.950);
+    --text-emphasis: theme(colors.blue.500);
+    --text-success: theme(colors.green.500);
+    --text-critical: theme(colors.red.500);
+    --button-primary: theme(colors.white.0);
+    --button-primary-hover: theme(colors.grey.300);
+    --button-primary-pressed: theme(colors.grey.200);
+    --button-secondary: theme(colors.grey.800);
+    --button-secondary-hover: theme(colors.grey.900);
+    --button-secondary-pressed: theme(colors.grey.900);
+    --button-tertiary: theme(colors.grey.900);
+    --button-tertiary-hover: theme(colors.grey.950);
+    --button-tertiary-pressed: theme(colors.grey.700);
+    --button-tertiary-disabled: theme(colors.grey.800);
+    --button-contrast: theme(colors.grey.950);
+    --button-contrast-hover: theme(colors.grey.900);
+    --button-contrast-pressed: theme(colors.grey.800);
+    --button-blur: hsla(0, 0%, 5%, 0.3);
+    --button-border-secondary: theme(colors.grey.600);
+    --button-border-secondary-hover: theme(colors.grey.400);
+    --button-border-secondary-pressed: theme(colors.grey.500);
+  }
+
+  [data-theme="light"] {
+    --surface-default: theme(colors.white.0);
+    --surface-subtle: theme(colors.grey.100);
+    --surface-muted: theme(colors.grey.200);
+    --surface-subdued: theme(colors.grey.300);
+    --surface-emphasis: theme(colors.grey.950);
+    --surface-accent: theme(colors.accent.500);
+    --surface-success: theme(colors.green.500);
+    --surface-success-emphasis: theme(colors.green.200);
+    --surface-critical: theme(colors.red.500);
+    --surface-critical-emphasis: theme(colors.red.200);
+    --surface-blur-90: hsla(0, 0%, 100%, 0.9);
+    --surface-blur-95: hsla(0, 0%, 100%, 0.95);
+    --text-default: theme(colors.grey.950);
+    --text-subtle: theme(colors.grey.500);
+    --text-muted: theme(colors.grey.400);
+    --text-contrast: theme(colors.white.0);
+    --text-emphasis: theme(colors.blue.500);
+    --text-success: theme(colors.green.500);
+    --text-critical: theme(colors.red.500);
+    --icon-default: theme(colors.grey.950);
+    --icon-subtle: theme(colors.grey.500);
+    --icon-muted: theme(colors.grey.300);
+    --icon-contrast: theme(colors.white.0);
+    --icon-accent: theme(colors.accent.500);
+    --icon-success: theme(colors.green.500);
+    --icon-critical: theme(colors.red.500);
+    --border-default: theme(colors.grey.300);
+    --border-subtle: theme(colors.grey.200);
+    --border-muted: theme(colors.grey.100);
+    --border-success: theme(colors.green.500);
+    --border-critical: theme(colors.red.500);
+    --button-primary: theme(colors.grey.950);
+    --button-primary-hover: theme(colors.grey.700);
+    --button-primary-pressed: theme(colors.grey.900);
+    --button-secondary: theme(colors.grey.300);
+    --button-secondary-hover: theme(colors.grey.400);
+    --button-secondary-pressed: theme(colors.grey.500);
+    --button-tertiary: theme(colors.grey.100);
+    --button-tertiary-hover: theme(colors.grey.300);
+    --button-tertiary-pressed: theme(colors.grey.200);
+    --button-tertiary-disabled: theme(colors.grey.300);
+    --button-contrast: theme(colors.white.0);
+    --button-contrast-hover: theme(colors.grey.100);
+    --button-contrast-pressed: theme(colors.grey.200);
+    --button-blur: hsla(0, 0%, 100%, 0.3);
+    --button-border-secondary: theme(colors.grey.300);
+    --button-border-secondary-hover: theme(colors.grey.400);
+    --button-border-secondary-pressed: theme(colors.grey.500);
+    --button-border-secondary-disabled: theme(colors.grey.300);
   }
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply text-text-default bg-surface-default;
+}
+
+h1 {
+  font-family: var(--font-serif);
 }
 
 @layer utilities {
