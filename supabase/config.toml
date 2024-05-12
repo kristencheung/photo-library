@@ -97,6 +97,11 @@ redirect_uri = ""
 # or any other third-party OIDC providers.
 url = ""
 
+[auth.external.twitter]
+enabled = true
+client_id = "env(SUPABASE_AUTH_TWITTER_API_KEY)"
+secret = "env(SUPABASE_AUTH_TWITTER_SECRET)"
+
 [analytics]
 enabled = false
 port = 54327
