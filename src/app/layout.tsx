@@ -30,7 +30,6 @@ export default function RootLayout({
           forcedTheme="dark"
           disableTransitionOnChange
         >
-          <Nav />
           {children}
         </ThemeProvider>
       </body>

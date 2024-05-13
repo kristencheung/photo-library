@@ -1,4 +1,3 @@
-import { getUser } from "@/actions/get-user-by-email"
 import TwitterLogo from "@/components/icons/twitter-logo"
 import { Button } from "@/components/ui/button"
 import { createClient } from "@/lib/utils/supabase"
@@ -19,8 +18,6 @@ export default function Home() {
         redirectTo: `${origin}/auth/callback`,
       },
     })
-
-    console.log("data", data)
 
     if (error) {
       console.log(error)
