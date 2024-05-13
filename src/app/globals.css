@@ -53,6 +53,8 @@
     --button-border-secondary-hover: theme(colors.grey.400);
     --button-border-secondary-pressed: theme(colors.grey.500);
     --button-border-secondary-disabled: theme(colors.grey.300);
+
+    --navigation-height: 82px;
   }
 
   [data-theme="dark"] {
