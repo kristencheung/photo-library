@@ -29,7 +29,9 @@ export default async function Layout({
   return (
     <>
       <Nav name={loggedInUser?.name} url={loggedInUser?.profileImage || ""} />
-      <main className="pt-navigation-height">{children}</main>
+      <main className="pt-navigation-height h-[calc(100dvh-theme(spacing.navigation-height))]">
+        {children}
+      </main>
     </>
   )
 }

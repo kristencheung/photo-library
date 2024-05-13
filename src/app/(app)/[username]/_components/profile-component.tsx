@@ -20,7 +20,7 @@ export const ProfileComponent = ({
         "mx-auto w-fit text-center justify-center flex flex-col items-center"
       )}
     >
-      <Avatar className="h-[90px] w-[90px]" url={url || ""} />
+      <Avatar height={90} width={90} url={url || ""} />
       <h1 className="text-xl mt-4">{name}</h1>
       <p className="text-text-muted text-sm font-medium">@{username || "--"}</p>
     </div>

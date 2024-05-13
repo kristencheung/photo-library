@@ -11,7 +11,7 @@ export default async function Page({
     username: username,
   })
   return (
-    <main className="h-[calc(100dvh-theme(spacing.navigation-height))] w-full">
+    <main className="w-full">
       <ProfileComponent
         className="mt-12"
         username={user?.userName!}
