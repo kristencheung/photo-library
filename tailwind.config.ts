@@ -87,6 +87,7 @@ const config = {
           950: "#140606",
         },
         white: {
+          DEFAULT: "#fff",
           0: "#fff",
         },
         surface: {

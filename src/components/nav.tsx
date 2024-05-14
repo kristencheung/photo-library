@@ -12,7 +12,7 @@ interface NavProps {
 
 export const Nav = ({ url, name }: NavProps) => {
   return (
-    <header className="fixed top-0 left-0 w-full">
+    <header className="fixed top-0 left-0 w-full bg-surface-default z-50">
       <Container className="flex h-navigation-height">
         <Link className="flex items-center" href="/">
           <PhotoLibraryLogo className="h-6 w-6" />

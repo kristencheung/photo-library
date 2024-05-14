@@ -1,6 +1,7 @@
 "use server"
 import { createClient } from "@/lib/utils/supabase"
 import { createElement } from "./create-element"
+import { revalidatePath } from "next/cache"
 
 export const uploadImage = async (formData: FormData) => {
   const file = formData.get("file") as File
@@ -37,6 +38,8 @@ export const uploadImage = async (formData: FormData) => {
     imageUrl: urlData?.publicUrl || "",
     userId: user.id,
   })
+
+  revalidatePath(`/${user?.user_metadata?.username}`)
 
   return element?.image
 }
