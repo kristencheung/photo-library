@@ -14,7 +14,7 @@ export const Elements = async () => {
     <div className="gap-[60px] mt-14 grid grid-cols-1 sm:grid-cols-[repeat(2,minmax(0px,1fr))] md:grid-cols-[repeat(3,minmax(0px,1fr))] lg:grid-cols-[repeat(4,minmax(0px,1fr))]">
       {elements && elements?.length > 0 ? (
         elements?.map((element) => {
-          return <Element element={element} />
+          return <Element key={element?.image} element={element} />
         })
       ) : (
         <div>No elements found</div>
