@@ -1,5 +1,6 @@
 import { getUserByUserName } from "@/actions/get-user-by-username"
 import { ProfileComponent } from "./_components/profile-component"
+import { Elements } from "./_components/elements"
 
 export default async function Page({
   params,
@@ -19,6 +20,7 @@ export default async function Page({
         url={user?.profileImage!}
         fullName={user?.name}
       />
+      <Elements />
     </main>
   )
 }

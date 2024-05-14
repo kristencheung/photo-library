@@ -5,6 +5,10 @@ module.exports = {
         protocol: "https",
         hostname: "pbs.twimg.com",
       },
+      {
+        protocol: "https",
+        hostname: "odgufgnskybxuxoeybbm.supabase.co",
+      },
     ],
   },
 }
