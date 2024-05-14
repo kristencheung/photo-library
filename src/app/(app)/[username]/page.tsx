@@ -10,13 +10,14 @@ export default async function Page({
   const user = await getUserByUserName({
     username: username,
   })
+
   return (
     <main className="w-full">
       <ProfileComponent
         className="mt-12"
         username={user?.userName!}
         url={user?.profileImage!}
-        name={user?.name}
+        fullName={user?.name}
       />
     </main>
   )

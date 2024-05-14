@@ -3,12 +3,12 @@ import { Avatar } from "@/components/avatar"
 import clsx from "clsx"
 
 export const ProfileComponent = ({
-  name,
+  fullName,
   username,
   url,
   className = "",
 }: {
-  name: string
+  fullName: string
   username: string
   url: string
   className?: string
@@ -21,7 +21,7 @@ export const ProfileComponent = ({
       )}
     >
       <Avatar height={90} width={90} url={url || ""} />
-      <h1 className="text-xl mt-4">{name}</h1>
+      <h1 className="text-xl mt-4">{fullName}</h1>
       <p className="text-text-muted text-sm font-medium">@{username || "--"}</p>
     </div>
   )
