@@ -19,14 +19,11 @@ export const Nav = ({ url, name }: NavProps) => {
         </Link>
 
         <div className="ml-auto h-full flex items-center gap-[18px]">
-          {name ? (
+          {name && (
             <>
               <UploadModal />
               <UserDropdown url={url} name={name} />
             </>
-          ) : (
-            // TODO: replace with link button
-            <Link href="/">Sign in</Link>
           )}
         </div>
       </Container>

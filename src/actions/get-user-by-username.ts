@@ -11,5 +11,6 @@ export async function getUserByUserName({
     .select()
     .from(accounts)
     .where(eq(accounts.userName, username?.toLowerCase()))
+
   return user?.[0]
 }

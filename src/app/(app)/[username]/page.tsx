@@ -18,7 +18,7 @@ export default async function Page({
         className="mt-12"
         username={user?.userName!}
         url={user?.profileImage!}
-        fullName={user?.name}
+        fullName={user?.name!}
       />
       <Elements />
     </main>
