@@ -13,7 +13,7 @@ export const ElementsSection = async () => {
 
   return (
     <>
-      <div className="pb-[80px] mt-14 w-full h-full">
+      <div className="mt-14 w-full h-full">
         {elements && elements?.length > 0 ? (
           <Elements elements={elements} />
         ) : (

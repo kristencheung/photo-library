@@ -14,7 +14,7 @@ export const Element = ({ element }: { element: any }) => {
 
   return (
     <ContextMenu>
-      <ContextMenuTrigger>
+      <ContextMenuTrigger className="h-fit">
         <div key={element.image} className="w-fit h-auto mx-auto aspect-auto">
           <Image
             alt="an element"
