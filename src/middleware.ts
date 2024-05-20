@@ -1,7 +1,7 @@
 import { createClient } from "@/lib/utils/supabase/middleware"
 import { NextResponse, type NextRequest } from "next/server"
 
-const publicRoutes = ["/", "/auth/callback"]
+const publicRoutes = ["/", "/auth/callback", "/api/og"]
 
 function isPublicRoute(route: string): boolean {
   return publicRoutes.includes(route)
