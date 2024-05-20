@@ -7,9 +7,9 @@ import {
   ContextMenuTrigger,
 } from "@/components/ui/context"
 import Image from "next/image"
+import { SelectElement } from "@/db/schema"
 
-// TODO: figure out how to get type from drizzle
-export const Element = ({ element }: { element: any }) => {
+export const Element = ({ element }: { element: SelectElement }) => {
   const setElementToDelete = useStore((state) => state.setElementToDelete)
 
   return (

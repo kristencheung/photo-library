@@ -1,12 +1,9 @@
 "use client"
-import { use } from "react"
 import { Element } from "./element"
 import { DeleteElementModal } from "@/components/delete-element-modal"
-import { useToast } from "@/components/use-toast"
+import { SelectElement } from "@/db/schema"
 
-// TODO: grab type from drizzle
-export const Elements = ({ elements }: { elements: any }) => {
-  const { toast } = useToast()
+export const Elements = ({ elements }: { elements: SelectElement[] }) => {
   return (
     <>
       <DeleteElementModal />

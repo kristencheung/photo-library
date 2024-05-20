@@ -50,7 +50,7 @@ export const elements = pgTable("elements", {
     .$onUpdate(() => new Date()),
 })
 
-export type InsertUser = typeof accounts.$inferInsert
-export type SelectUser = typeof accounts.$inferSelect
-export type InsertPost = typeof elements.$inferInsert
-export type SelectPost = typeof elements.$inferSelect
+export type InsertAccount = typeof accounts.$inferInsert
+export type SelectAccount = typeof accounts.$inferSelect
+export type InsertElement = typeof elements.$inferInsert
+export type SelectElement = typeof elements.$inferSelect

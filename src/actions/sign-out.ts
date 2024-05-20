@@ -6,7 +6,7 @@ export async function signOut() {
   const supabase = await createClient()
   const { error } = await supabase.auth.signOut()
   if (error) {
-    // TODO: use an error boundary on client
+    // Let error boundary catch this
     console.error("Sign out error", error)
   }
   redirect("/")
