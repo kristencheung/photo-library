@@ -15,7 +15,7 @@ export const AnimatedTitle = () => {
   }, [isInView])
   return (
     <div className="relative" ref={scope}>
-      <h1 className="text-2xl">
+      <h1 className="text-xl md:text-2xl">
         <span className="sr-only">Welcome to the Photo Library</span>
         <span className="block h-14 overflow-hidden" aria-hidden>
           {[

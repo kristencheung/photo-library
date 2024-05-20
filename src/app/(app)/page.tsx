@@ -28,7 +28,7 @@ export default function Home() {
     }
   }
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24 gap-6">
+    <main className="flex w-full min-h-screen flex-col items-center justify-center p-10 md:p-24 gap-6">
       <AnimatedTitle />
 
       <form action={signIn}>
