@@ -92,7 +92,6 @@ client_id = ""
 # DO NOT commit your OAuth provider secret to git. Use environment variable substitution instead:
 secret = "env(SUPABASE_AUTH_EXTERNAL_APPLE_SECRET)"
 # Overrides the default auth redirectUrl.
-redirect_uri = ""
 # Overrides the default auth provider URL. Used to support self-hosted gitlab, single-tenant Azure,
 # or any other third-party OIDC providers.
 url = ""
@@ -101,7 +100,6 @@ url = ""
 enabled = true
 client_id = "env(SUPABASE_AUTH_TWITTER_API_KEY)"
 secret = "env(SUPABASE_AUTH_TWITTER_SECRET)"
-redirect_uri = "https://odgufgnskybxuxoeybbm.supabase.co/auth/v1/callback"
 
 [analytics]
 enabled = false
