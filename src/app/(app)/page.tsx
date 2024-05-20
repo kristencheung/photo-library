@@ -12,7 +12,6 @@ export default function Home() {
 
     const supabase = createClient()
     const origin = headers().get("origin")
-    console.log("origin", origin)
 
     const { error, data } = await supabase.auth.signInWithOAuth({
       provider: "twitter",
@@ -25,7 +24,6 @@ export default function Home() {
       console.log(error)
     } else {
       console.log("Successfully logged in with Twitter!")
-      console.log("data", data.url)
       return redirect(data.url)
     }
   }
