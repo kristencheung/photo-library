@@ -6,12 +6,14 @@ import { Modal, ModalContent, ModalTrigger } from "./ui/modal"
 import { UploadImageInput } from "./upload-image-input"
 import { uploadImage } from "@/actions/upload-image"
 import LoadingSpinner from "./icons/loading-spinner"
+import { toast, useToast } from "./use-toast"
 
 interface UploadModalProps {}
 
 export const UploadModal = ({}: UploadModalProps) => {
   const [open, setOpen] = useState(false)
   const [isPending, startTransition] = useTransition()
+  const { toast } = useToast()
 
   const handleChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     if (!e?.target?.files?.[0]) return
@@ -22,6 +24,9 @@ export const UploadModal = ({}: UploadModalProps) => {
     startTransition(async () => {
       await uploadImage(formData)
       setOpen(false)
+      toast({
+        title: "Element created",
+      })
     })
   }
 
