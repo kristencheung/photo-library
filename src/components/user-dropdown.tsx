@@ -39,7 +39,9 @@ export const UserDropdown = ({ url, name }: UserDropdownProps) => {
           </div>
         </div>
         <DropdownMenuItem>
-          <button onClick={handleLogout}>Log out</button>
+          <button onClick={handleLogout} className="text-left h-full w-full">
+            Log out
+          </button>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

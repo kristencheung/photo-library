@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Inter, PT_Serif } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "next-themes"
+import { Toaster } from "@/components/toaster"
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" })
 const pt_serif = PT_Serif({
@@ -29,6 +30,7 @@ export default function RootLayout({
           forcedTheme="dark"
           disableTransitionOnChange
         >
+          <Toaster />
           {children}
         </ThemeProvider>
       </body>
