@@ -26,7 +26,7 @@ export const UserDropdown = ({ url, name }: UserDropdownProps) => {
             <div className="absolute rounded-full h-8 w-8 border-white border-2"></div>
             <Avatar height={24} width={24} url={url} />
           </div>
-          <button>
+          <button className="flex hover:bg-button-secondary-hover rounded-full h-6 w-6 justify-center items-center">
             <ChevronDownIcon />
           </button>
         </div>
