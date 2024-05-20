@@ -25,6 +25,7 @@ export default function Home() {
       console.log(error)
     } else {
       console.log("Successfully logged in with Twitter!")
+      console.log("data", data.url)
       return redirect(data.url)
     }
   }
