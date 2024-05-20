@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="US-en" suppressHydrationWarning>
       <body className={`${inter.variable} ${pt_serif.variable}`}>
         <ThemeProvider
           attribute="data-theme"

@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { createClient } from "@/lib/utils/supabase"
 import { headers } from "next/headers"
 import { redirect } from "next/navigation"
+import { AnimatedTitle } from "@/components/animated-title"
 
 // Landing page
 export default function Home() {
@@ -28,7 +29,8 @@ export default function Home() {
   }
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-24 gap-4">
-      <h1 className="text-lg">Welcome to the Photo Library</h1>
+      <AnimatedTitle />
+
       <form action={signIn}>
         <Button className="flex gap-1">
           Continue with <span className="sr-only">X</span>{" "}
