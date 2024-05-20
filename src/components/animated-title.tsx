@@ -48,7 +48,6 @@ export const AnimatedTitle = () => {
             "r",
             "y",
           ].map((letter, index) => {
-            console.log(letter)
             return (
               <span
                 data-letter={letter}

@@ -13,7 +13,7 @@ export default async function Page({
   })
 
   return (
-    <main className="w-full">
+    <main className="w-full h-1/2">
       <ProfileComponent
         className="mt-12"
         username={user?.userName!}

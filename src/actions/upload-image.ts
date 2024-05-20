@@ -2,6 +2,7 @@
 import { createClient } from "@/lib/utils/supabase"
 import { createElement } from "./create-element"
 import { revalidatePath } from "next/cache"
+import { v4 as uuidv4 } from "uuid"
 
 export const uploadImage = async (formData: FormData) => {
   const file = formData.get("file") as File
@@ -15,7 +16,9 @@ export const uploadImage = async (formData: FormData) => {
     throw new Error("User not found")
   }
 
-  const filePath = `${user.id}/${file?.name}`
+  // Generate a new UUID to handle duplicates
+  const newUuid = uuidv4()
+  const filePath = `${user.id}/${newUuid}-${file?.name}`
 
   const { data } = await supabase.storage
     .from("elements")
@@ -25,6 +28,7 @@ export const uploadImage = async (formData: FormData) => {
     .from("elements")
     .uploadToSignedUrl(filePath, data?.token || "", file)
 
+  // TODO: handle error
   if (uploadedError) {
     console.error("Error uploading", uploadedError)
     return ""
