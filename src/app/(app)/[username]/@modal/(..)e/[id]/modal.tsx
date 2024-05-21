@@ -20,7 +20,7 @@ export function Modal({ children }: { children: React.ReactNode }) {
   }
 
   return createPortal(
-    <div className="overflow-hidden bg-black/80 fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center z-[80]">
+    <div className="bg-black/80 fixed top-0 left-0 right-0 bottom-0 flex justify-center items-center z-[80]">
       <dialog
         ref={dialogRef}
         onClose={onDismiss}

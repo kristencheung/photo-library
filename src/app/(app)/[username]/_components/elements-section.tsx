@@ -7,7 +7,7 @@ export const ElementsSection = async () => {
 
   return (
     <>
-      <div className="mt-14 w-full h-full">
+      <div className="mt-14">
         {elements && elements?.length > 0 ? (
           <Elements elements={elements} />
         ) : (
