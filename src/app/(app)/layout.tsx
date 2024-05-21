@@ -1,4 +1,4 @@
-import { getUser, getUserByUserName } from "@/actions/get-user"
+import { getUser } from "@/actions/get-user"
 import { Nav } from "@/components/nav"
 import { createClient } from "@/lib/utils/supabase"
 
