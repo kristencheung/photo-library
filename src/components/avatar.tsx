@@ -19,7 +19,7 @@ export const Avatar = ({
     <div
       className={clsx(
         className,
-        // default to a gradient in case profile image doesn't exist (should be replaces with colors from style guide)
+        // default to a gradient in case profile image doesn't exist (should be replaced with colors from style guide)
         `${dimensionsClass} aspect-square relative bg-gradient-to-r from-green-400 to-blue-500 rounded-full`
       )}
     >
