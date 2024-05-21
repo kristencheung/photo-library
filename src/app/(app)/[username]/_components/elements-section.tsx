@@ -1,15 +1,9 @@
-import { getElementsByUserId } from "@/actions/get-elements-by-user-id"
-import { createClient } from "@/lib/utils/supabase"
+import { getElements } from "@/actions/get-elements"
 import { Elements } from "./elements"
 import { UploadModal } from "@/components/upload-modal"
 
 export const ElementsSection = async () => {
-  const supabase = await createClient()
-  const {
-    data: { user },
-  } = await supabase.auth.getUser()
-
-  const elements = await getElementsByUserId({ userId: user?.id! })
+  const elements = await getElements()
 
   return (
     <>

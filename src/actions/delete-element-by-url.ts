@@ -24,9 +24,7 @@ export async function deleteElement({
 
   await db.delete(elements).where(eq(elements.image, elementImageUrl))
 
-  const { data, error } = await supabase.storage
-    .from("elements")
-    .remove([filename!])
+  await supabase.storage.from("elements").remove([filename!])
 
   revalidatePath(`/${user?.user_metadata?.username}`)
 }

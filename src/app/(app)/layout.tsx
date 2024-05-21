@@ -1,4 +1,4 @@
-import { getUserByUserName } from "@/actions/get-user-by-username"
+import { getUser, getUserByUserName } from "@/actions/get-user"
 import { Nav } from "@/components/nav"
 import { createClient } from "@/lib/utils/supabase"
 
@@ -22,12 +22,11 @@ export default async function Layout({
     )
   }
 
-  const loggedInUser = await getUserByUserName({
-    username: user.user_metadata.user_name,
-  })
+  const loggedInUser = await getUser()
 
   return (
     <>
+      <div id="modal-root" className="h-full w-full"></div>
       <Nav name={loggedInUser?.name} url={loggedInUser?.profileImage || ""} />
       <main className="pt-navigation-height h-[calc(100dvh-theme(spacing.navigation-height))] px-[60px]">
         {children}

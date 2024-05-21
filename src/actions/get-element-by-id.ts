@@ -1,8 +1,9 @@
 import { db } from "@/db"
 import { elements } from "@/db/schema"
 import { createClient } from "@/lib/utils/supabase"
+import { eq } from "drizzle-orm"
 
-export async function createElement({ imageUrl }: { imageUrl: string }) {
+export async function getElementById({ id }: { id: string }) {
   const supabase = await createClient()
   const {
     data: { user },
@@ -11,10 +12,10 @@ export async function createElement({ imageUrl }: { imageUrl: string }) {
   if (!user) {
     throw new Error("User not found")
   }
-  const element = await db
-    .insert(elements)
-    .values({ image: imageUrl, accountId: user?.id, description: "" })
-    .returning()
+  const element = await await db
+    .select()
+    .from(elements)
+    .where(eq(elements.id, id))
 
   return element?.[0]
 }

@@ -40,7 +40,6 @@ export const uploadImage = async (formData: FormData) => {
 
   const element = await createElement({
     imageUrl: urlData?.publicUrl || "",
-    userId: user.id,
   })
 
   revalidatePath(`/${user?.user_metadata?.username}`)

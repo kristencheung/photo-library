@@ -2,7 +2,7 @@
 import useStore from "@/lib/utils/store"
 import { Button } from "./ui/button"
 import { Modal, ModalContent, ModalTitle } from "./ui/modal"
-import { deleteElement } from "@/actions/delete-element-by-id"
+import { deleteElement } from "@/actions/delete-element-by-url"
 import { useTransition } from "react"
 import LoadingSpinner from "./icons/loading-spinner"
 import { useToast } from "./use-toast"

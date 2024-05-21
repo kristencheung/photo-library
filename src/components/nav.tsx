@@ -14,7 +14,11 @@ export const Nav = ({ url, name }: NavProps) => {
   return (
     <header className="fixed top-0 left-0 w-full bg-surface-default z-50">
       <Container className="flex h-navigation-height">
-        <Link className="flex items-center h-fit my-auto" href="/">
+        <Link
+          prefetch={true}
+          className="flex items-center h-fit my-auto"
+          href="/"
+        >
           <PhotoLibraryLogo className="h-6 w-6" />
         </Link>
 
